@@ -9,3 +9,13 @@ repositories {
 dependencies {
 	compile "org.testng:testng:6.14.3"
 }
+
+test {
+	useTestNG()
+	scanForTestClasses = false
+	include '**/*'
+
+	beforeTest { descriptor ->
+		logger.lifecycle("Gradle running test: ${descriptor}")
+	}
+}
