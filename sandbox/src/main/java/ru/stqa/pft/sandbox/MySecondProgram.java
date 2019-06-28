@@ -7,7 +7,7 @@ public class MySecondProgram {
         Point p1 = new Point(8,9);
         Point p2 = new Point(6,4);
 
-       System.out.println("Distance = " + Point.distance(p1,p2));
+       System.out.println("Distance = " + p1.distance(p2));
     }
 }
 
