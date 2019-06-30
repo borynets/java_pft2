@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="b5baa8fa-49f8-4bd7-b202-e5e48da7c5fa" name="Default Changelist" comment="" />
+=======
     <list default="true" id="b5baa8fa-49f8-4bd7-b202-e5e48da7c5fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/build.gradle" afterDir="false" />
     </list>
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +23,32 @@
     <favorites_list name="java_pft2" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/MySecondProgram.java">
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/MySecondProgram.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="136">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+            <state relative-caret-position="119">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/Point.java">
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+>>>>>>> c89c778335e4becd8d42fdc12584ec0d949b0ac5
             </state>
           </provider>
         </entry>
@@ -50,6 +74,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -64,10 +89,21 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+=======
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="186" />
+    <option name="y" value="65" />
+    <option name="width" value="1543" />
+    <option name="height" value="869" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> c89c778335e4becd8d42fdc12584ec0d949b0ac5
     <option name="x" value="-37" />
     <option name="y" value="49" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -207,7 +243,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="150" y="52" width="1233" height="694" extended-state="0" />
+=======
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
+=======
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
+    <editor active="true" />
+>>>>>>> c89c778335e4becd8d42fdc12584ec0d949b0ac5
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49512196" visible="true" weight="0.34493193" />
       <window_info id="Structure" order="1" sideWeight="0.50487804" side_tool="true" weight="0.34493193" />
@@ -219,8 +263,16 @@
       <window_info anchor="bottom" id="Dependency Viewer" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37900355" />
+=======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37806875" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+=======
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+>>>>>>> c89c778335e4becd8d42fdc12584ec0d949b0ac5
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -270,6 +322,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sandbox/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -283,6 +336,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+    <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+<<<<<<< HEAD
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/pft/sandbox/MySecondProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+=======
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+>>>>>>> 40386f50f8777488823c6dc45262d67e2aa8fa9f
+>>>>>>> c89c778335e4becd8d42fdc12584ec0d949b0ac5
         </state>
       </provider>
     </entry>
