@@ -19,7 +19,7 @@ public class ContactHelper extends BaseHelper {
     type("lastname", contactData.getLastname());
     type("mobile", contactData.getMobile());
     type("email", contactData.getEmail());
-    click(By.xpath("//input[@name='submit'])[2]"));
+    click(By.xpath("//*[@id=\"content\"]/form/input[21]"));
   }
 
   public void initContactCreation() {
