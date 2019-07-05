@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.appmanager.BaseHelper;
 
 public class SessionHelper extends BaseHelper {
-    private FirefoxDriver wd;
+
 
     public SessionHelper(FirefoxDriver wd) {
         super(wd);
