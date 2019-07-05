@@ -8,6 +8,7 @@ public class BaseHelper {
 
 
   public BaseHelper(FirefoxDriver wd) {
+    this.wd = wd;
   }
 
     public void click(By locator) {
