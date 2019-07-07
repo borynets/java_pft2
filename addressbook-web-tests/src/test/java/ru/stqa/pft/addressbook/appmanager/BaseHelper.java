@@ -20,4 +20,8 @@ public class BaseHelper {
       wd.findElement(By.name(locator)).clear();
       wd.findElement(By.name(locator)).sendKeys(text);
   }
+
+  public void acceptAlert(){
+    wd.switchTo().alert().accept();
+  }
 }

@@ -19,10 +19,25 @@ public class ContactHelper extends BaseHelper {
     type("lastname", contactData.getLastname());
     type("mobile", contactData.getMobile());
     type("email", contactData.getEmail());
-    click(By.xpath("//*[@id=\"content\"]/form/input[21]"));
   }
 
   public void initContactCreation() {
     click(By.linkText("add new"));
+  }
+
+  public void selectContact(){
+    click(By.xpath("//*[@id=\"1\"]"));
+  }
+
+  public void submitContactModification() {
+    click(By.xpath("//*[@id=\"content\"]/form[1]/input[1]"));
+  }
+
+  public void initContactModification() {
+    click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a"));
+  }
+
+  public void deleteContact() {
+    click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
   }
 }
