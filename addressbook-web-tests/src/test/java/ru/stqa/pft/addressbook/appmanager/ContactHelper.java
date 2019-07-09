@@ -26,7 +26,7 @@ public class ContactHelper extends BaseHelper {
   }
 
   public void selectContact(){
-    click(By.xpath("//*[@id=\"1\"]"));
+    click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[1]/input"));
   }
 
   public void submitContactModification() {
