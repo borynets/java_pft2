@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends BaseHelper {
@@ -19,6 +20,13 @@ public class ContactHelper extends BaseHelper {
     type("lastname", contactData.getLastname());
     type("mobile", contactData.getMobile());
     type("email", contactData.getEmail());
+
+    if (isElementPresent((By.name("new_group"))){
+    new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+    }
+  }
+
+  private boolean isElementPresent(By locator) {
   }
 
   public void initContactCreation() {
