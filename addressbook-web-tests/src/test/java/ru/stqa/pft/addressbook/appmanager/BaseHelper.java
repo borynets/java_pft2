@@ -28,18 +28,17 @@ public class BaseHelper {
   }
 
 
-    public void acceptAlert () {
+  public void acceptAlert () {
       wd.switchTo().alert().accept();
     }
 
   public boolean isElementPresent(By locator) {
-    try{
+    try {
       wd.findElement(locator);
       return true;
-    } catch (NoSuchElementException ex){
+    } catch (NoSuchElementException ex) {
       return false;
     }
-
   }
 }
 

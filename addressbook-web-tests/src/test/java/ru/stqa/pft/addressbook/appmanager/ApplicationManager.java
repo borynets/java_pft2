@@ -26,6 +26,9 @@ public class ApplicationManager {
   }
 
   public void init() {
+    System.setProperty("webdriver.chrome.driver", "/Users/nina/Documents/chromedriver");
+    System.setProperty("webdriver.gecko.driver", "/Users/nina/Documents/geckodriver");
+
     if (browser.equals(BrowserType.FIREFOX)){
       wd = new FirefoxDriver();
     } else if (browser.equals(BrowserType.CHROME)){
@@ -35,7 +38,7 @@ public class ApplicationManager {
     }
 
     wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    wd.get("http://localhost/");
+    wd.get("http://localhost:8080/addressbook");
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
