@@ -3,9 +3,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-public class GroupHelper extends BaseHelper  {
+import java.util.ArrayList;
+import java.util.List;
+
+public class GroupHelper extends BaseHelper {
 
     public GroupHelper(WebDriver wd) {
         super(wd);
@@ -29,20 +33,20 @@ public class GroupHelper extends BaseHelper  {
         click(By.name("new"));
     }
 
-    public void initGroupModification (){
-        click(By.name ("edit"));
+    public void initGroupModification() {
+        click(By.name("edit"));
     }
 
-    public void submitGroupModification (){
-        click(By.name ("update"));
+    public void submitGroupModification() {
+        click(By.name("update"));
     }
 
-    public void selectGroup(){
-        click(By.xpath("//*[@id=\"content\"]/form/span[1]/input"));
+    public void selectGroup(int index) {
+        wd.findElements((By.name("selected[]"))).get(index).click();
     }
 
     public void deleteGroup() {
-        click(By.name ("delete"));
+        click(By.name("delete"));
     }
 
     public void createGroup(GroupData group) {
@@ -54,5 +58,22 @@ public class GroupHelper extends BaseHelper  {
 
     public boolean isThereAGroup() {
         return isElementPresent(By.xpath("//*[@id=\"content\"]/form/span[1]/input"));
+    }
+
+    public int getGroupCount() {
+        return wd.findElements(By.name("selected[]")).size();
+    }
+
+    public List<GroupData> getGroupList() {
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
+            GroupData group = new GroupData(id, name, null, null);
+            groups.add(group);
+
+        }
+        return groups;
     }
 }
