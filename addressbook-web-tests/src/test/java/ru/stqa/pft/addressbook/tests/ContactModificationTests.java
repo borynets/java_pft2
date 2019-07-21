@@ -25,5 +25,12 @@ public class ContactModificationTests extends TestBase {
     app.getContactHelper().returnHomePage();
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size());
+
+    before.remove(before.size()- 1);
+    before.add(contact);
+    Comparator<? super ContactData> byFirstName =(c1, c2) -> c1.getFirstname().compareTo(c2.getFirstname());
+    before.sort(byFirstName);
+    after.sort(byFirstName);
+    Assert.assertEquals(before, after);
   }
 }

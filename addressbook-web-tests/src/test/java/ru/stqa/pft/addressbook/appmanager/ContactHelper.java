@@ -73,7 +73,7 @@ public class ContactHelper extends BaseHelper {
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for(WebElement element : elements){
       List<WebElement> concatInfo = element.findElements(By.tagName("td"));
-      contacts.add(new ContactData(concatInfo.get(1).getText(), concatInfo.get(2).getText(), null, null, null));
+      contacts.add(new ContactData(concatInfo.get(2).getText(), concatInfo.get(1).getText(), null, null, null));
     }
     return contacts;
   }
