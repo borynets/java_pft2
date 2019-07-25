@@ -23,9 +23,9 @@ public class Groups extends ForwardingSet <GroupData> {
     }
 
     public Groups withAdded (GroupData group){
-    Groups groups = new Groups (this);
-    groups.add(group);
-    return groups;
+        Groups groups = new Groups (this);
+        groups.add(group);
+        return groups;
     }
 
 
@@ -36,3 +36,4 @@ public class Groups extends ForwardingSet <GroupData> {
         return groups;
     }
 }
+

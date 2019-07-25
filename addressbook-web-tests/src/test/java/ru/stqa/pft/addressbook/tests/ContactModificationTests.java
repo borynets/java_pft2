@@ -1,33 +1,38 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
-import java.util.Comparator;
-import java.util.List;
+import ru.stqa.pft.addressbook.model.Contacts;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactModificationTests extends TestBase {
+  @BeforeMethod
+
+  public void ensurePreconditions(){
+    if (app.contact().all().size() == 0) {
+      app.contact().create(new ContactData().withFirstname("Nina")
+              .withLastname("Borynets")
+              .withMobile("384874848")
+              .withEmail("test@tect.com")
+              .withGroup("this is test2"));
+    }
+  }
 
   @Test
-  public void testContactModification() {
-    if (! app.getContactHelper().isThereAContact()) {
-      app.getContactHelper().createContact(new ContactData("Nina", "Borynets", "384874848", "test@tect.com", "this is test1"));
-    }
-    List<ContactData> before = app.getContactHelper().getContactList();
-    int index = before.size() - 1;
-    ContactData contact = new ContactData("Nina", "Borynets", "384874848", "test@tect.com", null);
-    app.getContactHelper().initContactModification();
-    app.getContactHelper().fillContactForm(contact, false);
-    app.getContactHelper().submitContactModification();
-    app.getContactHelper().returnHomePage();
-    List<ContactData> after = app.getContactHelper().getContactList();
-    Assert.assertEquals(after.size(), before.size());
+  public void testGroupModification() {
+    Contacts before = app.contact().all();
+    ContactData modifiedConcact = before.iterator().next();
+    ContactData contact = new ContactData().withId(modifiedConcact.getId()).withFirstname(modifiedConcact.getFirstname())
+            .withLastname(modifiedConcact.getLastname())
+            .withMobile(modifiedConcact.getMobile())
+            .withEmail(modifiedConcact.getEmail());
+    app.contact().modify(contact);
 
-    before.remove(before.size()- 1);
-    before.add(contact);
-    Comparator<? super ContactData> byFirstName =(c1, c2) -> c1.getFirstname().compareTo(c2.getFirstname());
-    before.sort(byFirstName);
-    after.sort(byFirstName);
-    Assert.assertEquals(before, after);
+    assertThat(app.contact().count(), equalTo(before.size()));
+    Contacts after = app.contact().all();
+    assertThat(after, equalTo(before.without(modifiedConcact).withAdded(contact)));
   }
 }
