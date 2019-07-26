@@ -8,6 +8,10 @@ repositories {
 
 dependencies {
 	compile "org.testng:testng:6.14.3"
+	compile"org.testcontainers:selenium:1.12.0"
+	implementation 'org.touchbit.shields4j:testng:1.0.0'
+	compile"org.hamcrest:hamcrest:2.1"
+
 }
 
 test {
