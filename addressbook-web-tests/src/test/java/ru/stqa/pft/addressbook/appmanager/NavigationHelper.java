@@ -19,4 +19,8 @@ public class NavigationHelper extends BaseHelper {
     }
     click(By.linkText("groups"));
   }
+
+  public void homePage(){
+    wd.navigate().back();
+  }
 }

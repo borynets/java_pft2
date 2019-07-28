@@ -28,10 +28,11 @@ public class ContactDeletionTests extends TestBase {
 
 
   @Test
-  public void testContactDeletion() {
+  public void testContactDeletion() throws InterruptedException {
     Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next();
-    app.contact().delete();
+    app.contact().delete(deletedContact.getId());
+    Thread.sleep(5000);
     assertThat(app.contact().count(), equalTo(before.size() - 1));
     Contacts after = app.contact().all();
     assertThat(after, equalTo(before.without(deletedContact)));

@@ -40,10 +40,6 @@ public class ContactHelper extends BaseHelper {
     click(By.linkText("add new"));
   }
 
-  public void selectContact(int index) {
-    wd.findElements(By.name("selected[]")).get(index).click();
-  }
-
   public void submitContactModification() {
     click(By.xpath("//*[@id=\"content\"]/form[1]/input[1]"));
   }
@@ -52,9 +48,14 @@ public class ContactHelper extends BaseHelper {
     click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a"));
   }
 
-  public void deleteContact() {
-    click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
+  public void selectContactById(int id) {
+    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
+
+  public void deleteContact() {
+    click(By.xpath("//input[@value='Delete']"));
+  }
+
 
   public void create(ContactData contact) {
     initContactCreation();
@@ -65,6 +66,7 @@ public class ContactHelper extends BaseHelper {
   }
 
   public void modify(ContactData contact) {
+    selectContactById(contact.getId());
     initContactModification();
     fillContactForm(contact, false);
     submitContactModification();
@@ -73,8 +75,8 @@ public class ContactHelper extends BaseHelper {
   }
 
 
-  public void delete() {
-    selectContact(0);
+  public void delete(Integer id) {
+    selectContactById(id);
     deleteContact();
     super.acceptAlert();
     contactCache = null;
@@ -88,7 +90,7 @@ public class ContactHelper extends BaseHelper {
 
 
   public int count() {
-    return wd.findElements(By.name("entry")).size();
+    return wd.findElements(By.name("selected[]")).size();
   }
 
   public Contacts all() {
